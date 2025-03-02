@@ -129,7 +129,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Email" >
+                                        <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" >
                                         @error('email')
                                             <div class="error-message">{{ $message }}</div>
                                         @enderror

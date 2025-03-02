@@ -11,6 +11,7 @@ Route::get('/', function () {
 Route::get('/create/reforme',[ValidationController::class,'create'])->name('create.reforme');
 Route::get('/index/reforme',[ValidationController::class,'index'])->name('index.reforme');
 Route::post('/store/reforme',[ValidationController::class,'store'])->name('store.reforme');
+Route::get('/download-pdf/{id}', [ValidationController::class, 'downloadPDF'])->name('download.pdf');
 
 
 Route::get('/dashboard/admin',[AdminController::class,'dashboard'])->name('dashboard.admin');
@@ -25,4 +26,6 @@ Route::delete('/delete/admin/{id}',[AdminController::class,'delete'])->name('del
 
 Route::get('/reforme/pris',[AdminController::class,'reformePrise'])->name('reforme.prise');
 Route::get('/reforme/non/pris',[AdminController::class,'reformeNonPrise'])->name('reforme.nonprise');
+
+
 
