@@ -35,6 +35,7 @@ class ValidationController extends Controller
             'immatriculation' => 'required',
             'marque' => 'required',
             'dateServ' => 'required|date',
+            'direction' => 'required',
             'montant' => 'required|numeric',
         ], [
             'name.required' => 'Le nom est obligatoire',
@@ -53,6 +54,7 @@ class ValidationController extends Controller
             'matricule.min' => 'Le matricule doit contenir au minimum 6 caractères',
             'fonction.min' => 'La fonction doit contenir au minimum 3 caractères',
             'dateNaiss.before' => 'La date de naissance doit être antérieure à la date actuelle',
+            'direction.required' => 'La direction est obligatoire'
         ]);
     
         // Déterminer l'état en fonction de l'ancienneté
@@ -69,6 +71,7 @@ class ValidationController extends Controller
         $validation->dateNaiss = $request->dateNaiss;
         $validation->dateEmbauche = $request->dateEmbauche;
         $validation->ancien = $request->ancien;
+        $validation->direction = $request->direction;
         $validation->etat = $etat; // Définir l'état en fonction de l'ancienneté
         $validation->immatriculation = $request->immatriculation;
         $validation->marque = $request->marque;

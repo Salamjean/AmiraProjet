@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('dateEmbauche');
             $table->string('ancien');
             $table->string('etat');
+            $table->string('direction');
             $table->string('immatriculation');
             $table->string('marque');
             $table->date('dateServ');

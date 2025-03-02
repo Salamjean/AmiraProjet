@@ -539,7 +539,7 @@ body{
 	visibility:visible;
 	transform:scale(1);
 }
-.header .search-form input {
+.header .search-form input , sel{
 	width: 282px;
 	height: 50px;
 	line-height: 50px;
@@ -2624,7 +2624,7 @@ body{
 	z-index: 1;
 	color: #1A76D1;
 }
-.news-single .form-group input {
+.news-single .form-group input,select {
 	width: 100%;
 	height: 50px;
 	-webkit-transition: all 0.4s ease;
@@ -2656,7 +2656,7 @@ body{
 	font-size:14px;
 	color:#2C2D3F;
 }
-.news-single .form-group input, .news-single .form-group textarea {
+.news-single .form-group input,select, .news-single .form-group textarea {
 	border: 1px solid transparent;
 	border: 1px solid #eee;
 	border-radius: 5px;
@@ -2743,7 +2743,7 @@ body{
 	margin-top:30px;
 }
 .appointment .form .form-group{}
-.appointment .form input {
+.appointment .form input, select {
 	width: 100%;
 	height: 50px;
 	border: 1px solid #eee;
@@ -2907,7 +2907,7 @@ body{
 .login .form .form-group {
 	margin-bottom: 22px;
 }
-.login .form .form-group input {
+.login .form .form-group input,select {
 	width: 100%;
 	height: 50px;
 	border: 1px solid #eee;
@@ -2952,7 +2952,7 @@ body{
 .login .login-form .checkbox label:hover{
 	cursor:pointer;
 }
-.login .login-form .checkbox label input{
+.login .login-form .checkbox label input,select{
 	display:none;
 }
 .login .login-form .checkbox label::before {
@@ -3062,7 +3062,7 @@ body{
 .register .form .form-group {
 	margin-bottom: 22px;
 }
-.register .form .form-group input {
+.register .form .form-group input,select {
 	width: 100%;
 	height: 50px;
 	border: 1px solid #eee;
@@ -3107,7 +3107,7 @@ body{
 .register .register-form .checkbox label:hover{
 	cursor:pointer;
 }
-.register .register-form .checkbox label input{
+.register .register-form .checkbox label input,select{
 	display:none;
 }
 .register .register-form .checkbox label::before {
@@ -3281,7 +3281,7 @@ body{
 .contact-us .form .form-group {
 	margin-bottom: 22px;
 }
-.contact-us .form .form-group input {
+.contact-us .form .form-group input,select {
 	width: 100%;
 	height: 50px;
 	border: 1px solid #eee;
@@ -3337,7 +3337,7 @@ body{
 .contact-us .contact-us-form .checkbox label:hover{
 	cursor:pointer;
 }
-.contact-us .contact-us-form .checkbox label input{
+.contact-us .contact-us-form .checkbox label input, select{
 	display:none;
 }
 .contact-us .contact-us-form .checkbox label::before {

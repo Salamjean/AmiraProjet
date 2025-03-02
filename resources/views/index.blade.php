@@ -41,6 +41,7 @@
                         <th>Date de Naissance</th>
                         <th>Date d'embauche</th>
                         <th>Anciennété</th>
+                        <th>Direction</th>
                         <th>Immatriculation du véhicule</th>
                         <th>Marque du véhicule</th>
                         <th>Date de mise en service du véhicule</th>
@@ -59,6 +60,7 @@
                         <td>{{ $validation->dateNaiss }}</td>
                         <td>{{ $validation->dateEmbauche }}</td>
                         <td>{{ $validation->ancien }}</td>
+                        <td>{{ $validation->direction }}</td>
                         <td>{{ $validation->immatriculation }}</td>
                         <td>{{ $validation->marque }}</td>
                         <td>{{ $validation->dateServ }}</td>

@@ -15,6 +15,7 @@ class Validation extends Model
         'dateNaiss',
         'etat',
         'dateEmbauche',
+        'direction',
         'ancien',
         'immatriculation',
         'marque',

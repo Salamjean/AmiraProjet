@@ -18,37 +18,19 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS Links -->
     <link rel="stylesheet" href="{{ asset('asset2/css/bootstrap.min.css') }}">
-
-    <!-- Nice Select CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/nice-select.css') }}">
-
-    <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/font-awesome.min.css') }}">
-
-    <!-- icofont CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/icofont.css') }}">
-
-    <!-- Slicknav -->
     <link rel="stylesheet" href="{{ asset('asset2/css/slicknav.min.css') }}">
-
-    <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/owl-carousel.css') }}">
-
-    <!-- Datepicker CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/datepicker.css') }}">
-
-    <!-- Animate CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/animate.min.css') }}">
-
-    <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/magnific-popup.css') }}">
-
-    <!-- Medipro CSS -->
     <link rel="stylesheet" href="{{ asset('asset2/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('asset2/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset2/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
     <style>
         .form-group {
@@ -60,9 +42,6 @@
             height: 120px;
         }
     </style>
-
-    <!-- SweetAlert2 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -72,11 +51,9 @@
             <div class="loader-inner"></div>
         </div>
     </div>
-    <!-- End Preloader -->
 
     <!-- Header Area -->
     <header class="header">
-        <!-- Header Inner -->
         <div class="header-inner">
             <div class="container">
                 <div class="inner">
@@ -95,9 +72,7 @@
                 </div>
             </div>
         </div>
-        <!--/ End Header Inner -->
     </header>
-    <!-- End Header Area -->
 
     <!-- Breadcrumbs -->
     <div class="breadcrumbs overlay">
@@ -116,9 +91,8 @@
             </div>
         </div>
     </div>
-    <!-- End Breadcrumbs -->
 
-    <!-- Start Contact Us -->
+    <!-- Contact Us Section -->
     <section class="contact-us section">
         <div class="container">
             <div class="col-lg-11 mx-auto">
@@ -129,6 +103,7 @@
                         @csrf
                         @method('POST')
                         <div class="row">
+                            <!-- Input Fields -->
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Nom <span style="color:red">*</span></label>
@@ -138,6 +113,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Prénoms <span style="color:red">*</span></label>
@@ -147,6 +123,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Contact <span style="color:red">*</span></label>
@@ -156,6 +133,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Matricule <span style="color:red">*</span></label>
@@ -165,6 +143,22 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            <!-- Additional Fields -->
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Direction<span style="color:red">*</span></label>
+                                    <select type="text" name="direction" style="width:100%"> 
+                                        <option value="DOMSE">DOMSE</option>
+                                        <option value="DRH">DRH</option>
+                                        <option value="DSIN">DSIN</option>
+                                    </select>
+                                    @error('direction')
+                                        <div style="color: red;">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Fonction <span style="color:red">*</span></label>
@@ -174,6 +168,8 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            <!-- Date Fields -->
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Date d'embauche <span style="color:red">*</span></label>
@@ -183,6 +179,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Ancienneté <span style="color:red">*</span></label>
@@ -192,6 +189,8 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            <!-- Vehicle Details -->
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Immatriculation du véhicule <span style="color:red">*</span></label>
@@ -201,6 +200,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Marque du véhicule <span style="color:red">*</span></label>
@@ -210,6 +210,8 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            <!-- More Fields -->
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Date de naissance <span style="color:red">*</span></label>
@@ -219,6 +221,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Date de mise en service <span style="color:red">*</span></label>
@@ -228,6 +231,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Montant à proposer <span style="color:red">*</span></label>
@@ -237,6 +241,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-group login-btn">
                                     <button class="btn" type="submit">Valider</button>
@@ -248,10 +253,11 @@
             </div>
         </div>
 
+        <!-- Contact Info -->
         <div class="contact-info">
             <div class="row">
-                <!-- single-info -->
-                <div class="col-lg-4 col-12 ">
+                <!-- Single Info -->
+                <div class="col-lg-4 col-12">
                     <div class="single-info">
                         <i class="icofont icofont-ui-call"></i>
                         <div class="content">
@@ -260,20 +266,19 @@
                         </div>
                     </div>
                 </div>
-                <!--/End single-info -->
-                <!-- single-info -->
-                <div class="col-lg-4 col-12 ">
+                <!--/ End single-info -->
+
+                <div class="col-lg-4 col-12">
                     <div class="single-info">
                         <i class="icofont-google-map"></i>
                         <div class="content">
-                            <h3>Côte d'ivoire</h3>
+                            <h3>Côte d'Ivoire</h3>
                             <p>Abidjan, Treichville</p>
                         </div>
                     </div>
                 </div>
-                <!--/End single-info -->
-                <!-- single-info -->
-                <div class="col-lg-4 col-12 ">
+
+                <div class="col-lg-4 col-12">
                     <div class="single-info">
                         <i class="icofont icofont-wall-clock"></i>
                         <div class="content">
@@ -282,67 +287,41 @@
                         </div>
                     </div>
                 </div>
-                <!--/End single-info -->
             </div>
         </div>
     </section>
-    <!--/ End Contact Us -->
 
-    <!-- Footer Area -->
+    <!-- Footer -->
     @include('layouts.footer')
 
-    <!-- jquery Min JS -->
+    <!-- JavaScript -->
     <script src="{{ asset('asset2/js/jquery.min.js') }}"></script>
-    <!-- jquery Migrate JS -->
     <script src="{{ asset('asset2/js/jquery-migrate-3.0.0.js') }}"></script>
-    <!-- jquery Ui JS -->
     <script src="{{ asset('asset2/js/jquery-ui.min.js') }}"></script>
-    <!-- Easing JS -->
     <script src="{{ asset('asset2/js/easing.js') }}"></script>
-    <!-- Color JS -->
     <script src="{{ asset('asset2/js/colors.js') }}"></script>
-    <!-- Popper JS -->
     <script src="{{ asset('asset2/js/popper.min.js') }}"></script>
-    <!-- Bootstrap Datepicker JS -->
     <script src="{{ asset('asset2/js/bootstrap-datepicker.js') }}"></script>
-    <!-- Jquery Nav JS -->
     <script src="{{ asset('asset2/js/jquery.nav.js') }}"></script>
-    <!-- Slicknav JS -->
     <script src="{{ asset('asset2/js/slicknav.min.js') }}"></script>
-    <!-- ScrollUp JS -->
     <script src="{{ asset('asset2/js/jquery.scrollUp.min.js') }}"></script>
-    <!-- Niceselect JS -->
     <script src="{{ asset('asset2/js/niceselect.js') }}"></script>
-    <!-- Tilt Jquery JS -->
     <script src="{{ asset('asset2/js/tilt.jquery.min.js') }}"></script>
-    <!-- Owl Carousel JS -->
     <script src="{{ asset('asset2/js/owl-carousel.js') }}"></script>
-    <!-- counterup JS -->
     <script src="{{ asset('asset2/js/jquery.counterup.min.js') }}"></script>
-    <!-- Steller JS -->
     <script src="{{ asset('asset2/js/steller.js') }}"></script>
-    <!-- Wow JS -->
     <script src="{{ asset('asset2/js/wow.min.js') }}"></script>
-    <!-- Magnific Popup JS -->
     <script src="{{ asset('asset2/js/jquery.magnific-popup.min.js') }}"></script>
-    <!-- Counter Up CDN JS -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <!-- Google Map API Key JS -->
-    <script src="https://maps.google.com/maps/api/js?key=AIzaSyDGqTyqoPIvYxhn_Sa7ZrK5bENUWhpCo0w"></script>
-    <!-- Gmaps JS -->
     <script src="{{ asset('asset2/js/gmaps.min.js') }}"></script>
-    <!-- Map Active JS -->
     <script src="{{ asset('asset2/js/map-active.js') }}"></script>
-    <!-- Bootstrap JS -->
     <script src="{{ asset('asset2/js/bootstrap.min.js') }}"></script>
-    <!-- Main JS -->
     <script src="{{ asset('asset2/js/main.js') }}"></script>
 
     <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // Fonction pour calculer l'ancienneté
+        // Calculate Seniority
         function calculateAnciennete() {
             const dateEmbauche = document.getElementById('dateEmbauche').value;
             if (!dateEmbauche) {
@@ -359,7 +338,7 @@
             document.getElementById('ancien').value = anciennete ;
         }
 
-        // Gestion des messages SweetAlert2
+        // SweetAlert2 Messages Handling
         $(document).ready(function() {
             @if (Session::has('success1'))
                 Swal.fire({
