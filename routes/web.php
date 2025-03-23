@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CsvImportController;
 use App\Http\Controllers\ValidationController;
+use App\Http\Controllers\ValidationImportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,6 +28,10 @@ Route::delete('/delete/admin/{id}',[AdminController::class,'delete'])->name('del
 
 Route::get('/reforme/pris',[AdminController::class,'reformePrise'])->name('reforme.prise');
 Route::get('/reforme/non/pris',[AdminController::class,'reformeNonPrise'])->name('reforme.nonprise');
+
+
+Route::get('/csv/import', [CsvImportController::class, 'showImportForm'])->name('csv.import.form');
+Route::post('/csv/import', [CsvImportController::class, 'import'])->name('csv.import');
 
 
 

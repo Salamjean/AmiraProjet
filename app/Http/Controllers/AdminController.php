@@ -13,7 +13,7 @@ class AdminController extends Controller
 {
         public function dashboard(){
             $validations = Validation::count();
-            $nonPris = Validation::where('etat', 'Non Pris')->count();
+            $nonPris = Validation::where('etat', 'Non pris')->count();
             $pris = Validation::where('etat', 'Pris')->count();
     
             // Récupérer les données pour le graphique évolutif
@@ -37,7 +37,7 @@ class AdminController extends Controller
                 }
                 if ($dayValidation->etat == 'Pris') {
                     $prisCounts[$date] = $dayValidation->count;
-                } elseif ($dayValidation->etat == 'Non Pris') {
+                } elseif ($dayValidation->etat == 'Non pris') {
                     $nonPrisCounts[$date] = $dayValidation->count;
                 }
             }
@@ -141,7 +141,7 @@ class AdminController extends Controller
     }
 
     public function reformeNonPrise(){
-        $validations = Validation::where('etat', 'Non Pris')->get();
+        $validations = Validation::where('etat', 'Non pris')->get();
         return view('admin.reformeNonPrise', compact('validations'));
     }
     

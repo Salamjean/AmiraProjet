@@ -14,7 +14,12 @@ return new class extends Migration
         Schema::create('validations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('reference');
             $table->string('prenom');
+            $table->string('note');
+            $table->string('sanction');
+            $table->string('typeV');
+            $table->string('categorie');
             $table->string('contact');
             $table->string('matricule');
             $table->string('fonction');

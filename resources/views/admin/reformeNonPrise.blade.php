@@ -7,15 +7,20 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr style="text-align: center">
+                        <th>N°</th>
                         <th>Nom et Prénoms</th>
                         <th>Matricule</th>
                         <th>Fonction de l'agent</th>
                         <th>Date de Naissance</th>
                         <th>Date d'embauche</th>
+                        <th>Note Annuelle</th>
+                        <th>Sanction disciplinaire</th>
+                        <th>Catégorie</th>
                         <th>Anciennété</th>
+                        <th>Direction</th>
                         <th>Immatriculation du véhicule</th>
                         <th>Marque du véhicule</th>
                         <th>Date de mise en service du véhicule</th>
@@ -24,21 +29,30 @@
                     </tr>
                 </thead>
                 <tbody> <!-- Correction : <tfoot> devient <tbody> pour le corps du tableau -->
-                    @foreach ($validations as $validation)
+                    @forelse ($validations as $validation)
                     <tr style="text-align: center">
+                        <td>{{ $validation->reference }}</td>
                         <td>{{ $validation->name.' '.$validation->prenom }}</td>
                         <td>{{ $validation->matricule }}</td>
                         <td>{{ $validation->fonction }}</td>
                         <td>{{ $validation->dateNaiss }}</td>
                         <td>{{ $validation->dateEmbauche }}</td>
+                        <td>{{ $validation->note }}</td>
+                        <td>{{ $validation->sanction }}</td>
+                        <td>{{ $validation->categorie }}</td>
                         <td>{{ $validation->ancien }}</td>
+                        <td>{{ $validation->direction }}</td>
                         <td>{{ $validation->immatriculation }}</td>
                         <td>{{ $validation->marque }}</td>
                         <td>{{ $validation->dateServ }}</td>
                         <td>{{ $validation->montant }}</td>
                         <td>{{ $validation->created_at }}</td>
                     </tr>
-                    @endforeach
+                    @empty
+                    <tr>
+                        <td colspan="16" class="text-center">Aucune soumission effectuée</td>
+                    </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>

@@ -144,24 +144,51 @@
                                 </div>
                             </div>
 
-                            <!-- Additional Fields -->
-                            <div class="col-lg-6">
+
+                            <div class="col-lg-6 ">
                                 <div class="form-group">
-                                    <label for="">Direction<span style="color:red">*</span></label>
-                                    <select type="text" name="direction" style="width:100%"> 
-                                        <option value="DOMSE">DOMSE</option>
-                                        <option value="DRH">DRH</option>
-                                        <option value="DSIN">DSIN</option>
+                                    <!-- Label placed above the select -->
+                                    <label for="categorie">Catégorie <span style="color:red">*</span></label>
+                                    
+                                    <!-- Select element -->
+                                    <select name="categorie" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                                        <option value="Cardre">Cardre</option>
+                                        <option value="Agent de maitrise">Agent de maitrise</option>
+                                        <option value="Employé">Employé</option>
                                     </select>
+                                    
+                                    <!-- Error message for validation -->
                                     @error('direction')
-                                        <div style="color: red;">{{ $message }}</div>
+                                        <div style="color: red; margin-top: 5px;">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
 
+                            <!-- Additional Fields -->
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="">Fonction <span style="color:red">*</span></label>
+                                    <!-- Label placed above the select -->
+                                    <label for="direction">Direction <span style="color:red">*</span></label>
+                                    
+                                    <!-- Select element -->
+                                    <select name="direction" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                                        <option value="DOMSE">DOMSE</option>
+                                        <option value="DRH">DRH</option>
+                                        <option value="DSIN">DSIN</option>
+                                        <option value="DL">DL</option>
+                                    </select>
+                                    
+                                    <!-- Error message for validation -->
+                                    @error('direction')
+                                        <div style="color: red; margin-top: 5px;">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Fonction</label>
                                     <input type="text" name="fonction" placeholder="Fonction" value="{{ old('fonction') }}">
                                     @error('fonction')
                                         <div style="color: red;">{{ $message }}</div>
@@ -169,6 +196,39 @@
                                 </div>
                             </div>
 
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Note Annuelle <span style="color:red">*</span></label>
+                                    <input type="text" name="note" placeholder="Exemple : 1" value="{{ old('note') }}">
+                                    @error('note')
+                                        <div style="color: red;">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- Label for Sanction -->
+                                <label for="" style="display: block; margin-bottom: 10px;">Sanction disciplinaire <span style="color:red">*</span></label>
+                                
+                                <!-- Container for the radio buttons -->
+                                <div class="form-group d-flex align-items-center">
+                                    <!-- Oui Radio Button -->
+                                    <div class="d-flex align-items-center mr-3">
+                                        <input type="radio" name="sanction" value="oui" id="sanction-oui" class="custom-radio" style="transform: scale(1.2); margin-right: 5px;">
+                                        <label for="sanction-oui" style="margin-right: 20px;">Oui</label>
+                                    </div>
+
+                                    <!-- Non Radio Button -->
+                                    <div class="d-flex align-items-center">
+                                        <input type="radio" name="sanction" value="non" id="sanction-non" class="custom-radio" style="transform: scale(1.2); margin-right: 5px;">
+                                        <label for="sanction-non">Non</label>
+                                    </div>
+                                </div>
+
+                                <!-- Error message for sanction -->
+                                @error('sanction')
+                                    <div style="color: red; margin-top: 5px;">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <!-- Date Fields -->
                             <div class="col-lg-6">
                                 <div class="form-group">
@@ -194,13 +254,22 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Immatriculation du véhicule <span style="color:red">*</span></label>
-                                    <input type="text" name="immatriculation" placeholder="Immatriculation du véhicule" value="{{ old('immatriculation') }}">
+                                    <input type="text" name="immatriculation" placeholder="Exemple : AA-XXXX-AA" value="{{ old('immatriculation') }}">
                                     @error('immatriculation')
                                         <div style="color: red;">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
 
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Type de véhicule <span style="color:red">*</span></label>
+                                    <input type="text" name="typeV" placeholder="Marque du véhicule" value="{{ old('typeV') }}">
+                                    @error('typeV')
+                                        <div style="color: red;">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Marque du véhicule <span style="color:red">*</span></label>
@@ -232,10 +301,10 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="form-group">
                                     <label for="">Montant à proposer <span style="color:red">*</span></label>
-                                    <input type="number" name="montant" value="{{ old('montant') }}">
+                                    <input type="text" name="montant" placeholder="Ex: 100 000" value="{{ old('montant') }}">
                                     @error('montant')
                                         <div style="color: red;">{{ $message }}</div>
                                     @enderror
@@ -261,8 +330,8 @@
                     <div class="single-info">
                         <i class="icofont icofont-ui-call"></i>
                         <div class="content">
-                            <h3>Direction Commerciale, Marketing et de la Communication</h3>
-                            <p>(+225) 27 21 23 81 71</p>
+                            <h3>Direction Logistique, Département Maritime et Terrestre</h3>
+                            <p>(+225) 05 00 703 103</p>
                         </div>
                     </div>
                 </div>
@@ -273,7 +342,7 @@
                         <i class="icofont-google-map"></i>
                         <div class="content">
                             <h3>Côte d'Ivoire</h3>
-                            <p>Abidjan, Treichville</p>
+                            <p>Abidjan, Treichville Site D'Outillage</p>
                         </div>
                     </div>
                 </div>
@@ -283,7 +352,7 @@
                         <i class="icofont icofont-wall-clock"></i>
                         <div class="content">
                             <h3>Heure de disponibilité</h3>
-                            <p>Lundi - Mardi : 08h à 17h</p>
+                            <p>Lundi - Vendredi : 07h30 à 16h3O</p>
                         </div>
                     </div>
                 </div>

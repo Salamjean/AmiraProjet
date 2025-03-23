@@ -9,6 +9,10 @@ class Validation extends Model
     protected $fillable = [
         'name',
         'prenom',
+        'note',
+        'sanction',
+        'typeV',
+        'categorie',
         'contact',
         'matricule',
         'fonction',
