@@ -13,7 +13,7 @@
   <meta name="author" content="" />
   <link rel="icon" href="{{ asset('assets/images/logo_abidajn.png') }}" type="image/gif" />
 
-  <title>Port-Abidjan</title>
+  <title>Port Autonome Abidjan</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}" />
@@ -122,106 +122,9 @@
 
   <!-- about section -->
 
-  <section class="about_section layout_padding ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About Us
-              </h2>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- end about section -->
 
   <!-- gallery section -->
-
-  <div class="gallery_section layout_padding2">
-    <div class="container-fluid">
-      <div class="heading_container heading_center">
-        <h2>
-          Gallery
-        </h2>
-      </div>
-      <div class="row">
-        <div class=" col-sm-8 col-md-6 px-0">
-          <div class="img-box">
-            <img src="images/g1.jpg" alt="">
-            <a href="images/g1.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-4 col-md-3 px-0">
-          <div class="img-box">
-            <img src="images/g2.jpg" alt="">
-            <a href="images/g2.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 px-0">
-          <div class="img-box">
-            <img src="images/g3.jpg" alt="">
-            <a href="images/g3.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 px-0">
-          <div class="img-box">
-            <img src="images/g4.jpg" alt="">
-            <a href="images/g4.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-4 col-md-3 px-0">
-          <div class="img-box">
-            <img src="images/g5.jpg" alt="">
-            <a href="images/g5.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-8 col-md-6 px-0">
-          <div class="img-box">
-            <img src="images/g6.jpg" alt="">
-            <a href="images/g6.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          View All
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- end gallery section -->
-
-
-  <!-- service section -->
 
   <section class="service_section layout_padding">
     <div class="container">
@@ -238,14 +141,11 @@
             </div>
             <div class="detail-box">
               <h5>
-                Residential Decoration
+                Transport National & International
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio aspernatur officiis exercitationem asperiores praesentium
+               Livraison terrestre, maritime et aérienne.
               </p>
-              <a href="">
-                Read More
-              </a>
             </div>
           </div>
         </div>
@@ -256,14 +156,11 @@
             </div>
             <div class="detail-box">
               <h5>
-                Ecommercial Decoration
+                Gestion d'Entrepôt
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio aspernatur officiis exercitationem asperiores praesentium
+                Stockage, préparation de commandes, inventaire en temps réel.
               </p>
-              <a href="">
-                Read More
-              </a>
             </div>
           </div>
         </div>
@@ -274,14 +171,74 @@
             </div>
             <div class="detail-box">
               <h5>
-                Office Decoration
+              Suivi & Traçabilité des Colis
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio aspernatur officiis exercitationem asperiores praesentium
+                Plateforme en ligne pour suivre l'avancement des livraisons.
               </p>
-              <a href="">
-                Read More
-              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- end gallery section -->
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          EXPERTISES
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/s1.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Expertise 1
+              </h5>
+              <p>
+                Réseau de transport étendu à l'international.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/s2.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Expertise 2
+              </h5>
+              <p>
+              Plusieurs années d'expérience dans le secteur logistique.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/s3.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Expertise 2
+              </h5>
+              <p>
+                Partenariats solides avec des transporteurs certifiés.
+              </p>
             </div>
           </div>
         </div>
@@ -303,6 +260,17 @@
   <script src="{{ asset('assets/js/ekko-lightbox.min.js') }}"></script>
   <!-- custom js -->
   <script src="{{ asset('assets/js/custom.js') }}"></script>
+  <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="copyright-content">
+                    <p>© Copyright 2025  |  All Rights Reserved by <a href="https://www.portabidjan.ci/" target="_blank">portautonomeabidjan.ci</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 

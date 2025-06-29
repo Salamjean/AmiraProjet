@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Port-Abidjan</title>
+    <title>Port Autonome Abidjan</title>
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/images/logo_abidajn.png') }}">
@@ -172,10 +172,22 @@
                                     
                                     <!-- Select element -->
                                     <select name="direction" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                                        <option value="DL">DG</option>
                                         <option value="DOMSE">DOMSE</option>
                                         <option value="DRH">DRH</option>
-                                        <option value="DSIN">DSIN</option>
-                                        <option value="DL">DL</option>
+                                        <option value="DSIN">DL</option>
+                                        <option value="DL">DAAJC</option>
+                                        <option value="DL">DEESP</option>
+                                        <option value="DL">DDP</option>
+                                        <option value="DL">DTP</option>
+                                        <option value="DL">DIMO</option>
+                                        <option value="DL">DCMC</option>
+                                        <option value="DL">DCAQ</option>
+                                        <option value="DL">DFC</option>
+                                        <option value="DL">DAGS</option>
+                                        <option value="DL">DSIN</option>
+                                        <option value="DL">AUTRES</option>
+                                        
                                     </select>
                                     
                                     <!-- Error message for validation -->
