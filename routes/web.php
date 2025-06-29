@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CsvImportController;
 use App\Http\Controllers\ValidationController;
 use App\Http\Controllers\ValidationImportController;
+use App\Http\Controllers\VehiculeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,5 +34,15 @@ Route::get('/reforme/non/pris',[AdminController::class,'reformeNonPrise'])->name
 Route::get('/csv/import', [CsvImportController::class, 'showImportForm'])->name('csv.import.form');
 Route::post('/csv/import', [CsvImportController::class, 'import'])->name('csv.import');
 
+
+
+// routes de gestions des importations de vehicules 
+Route::get('/vehicule/import/import',[VehiculeController::class, 'listes'])->name('vehicule.listes.import');
+Route::post('/vehicule/import/store',[VehiculeController::class, 'store'])->name('vehicule.store');
+Route::controller(VehiculeController::class)->group(function() {
+    Route::get('/vehicules', 'index')->name('vehicules.index');
+    Route::get('/vehicules/export', 'export')->name('vehicules.export');
+    Route::post('/vehicules/import', 'import')->name('vehicules.import');
+});
 
 

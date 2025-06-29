@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Validation;
+use App\Models\Vehicule;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -11,7 +12,8 @@ class ValidationController extends Controller
 {
     public function create()
     {
-        return view('create');
+        $vehicules = Vehicule::all();
+        return view('create', compact('vehicules'));
     }
 
     public function index()

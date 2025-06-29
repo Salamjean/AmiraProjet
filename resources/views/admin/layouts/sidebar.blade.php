@@ -74,6 +74,23 @@
                 <a class="collapse-item" href="#">Liste-Catalogue</a>
             </div>
         </div>
+       
+    </li>
+     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCVe"
+            aria-expanded="true" aria-controls="collapseCVe">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Véhicule </span>
+        </a>
+        <div id="collapseCVe" class="collapse" aria-labelledby="headingCVe"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Véhicules </h6>
+                <a class="collapse-item" href="{{ route('vehicules.index') }}">Chargement</a>
+                <a class="collapse-item" href="{{route('vehicule.listes.import')}}">Liste-Véhicule</a>
+            </div>
+        </div>
+       
     </li>
 
     <!-- Divider -->
